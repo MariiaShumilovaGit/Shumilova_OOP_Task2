@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Human {
+public abstract class Human {
     private boolean gender;
     private String name;
     private String surname;
@@ -13,9 +13,7 @@ public class Human {
         return gender;
     }
 
-    public void setGender(boolean gender) {
-        this.gender = gender;
-    }
+    public void setGender(boolean gender) { this.gender = gender; }
 
     public String getName() {
         return name;

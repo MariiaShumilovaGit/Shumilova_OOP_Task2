@@ -8,10 +8,16 @@ public class Woman extends Human {
     }
 
     public Human GiveBirth(Human father) {
-        Human newHuman = new Human();
+        Human newHuman;
 
         if (getGender() == false) {
-            newHuman.setGender(Math.random()<0.5);
+            boolean newHumanGender = Math.random()<0.5;
+            if (newHumanGender == true) {
+                newHuman = new Man();
+            }
+            else {
+                newHuman = new Woman();
+            }
             System.out.println("Введите имя ребенка ");
             Scanner scan = new Scanner(System.in);
             newHuman.setName(scan.nextLine());
